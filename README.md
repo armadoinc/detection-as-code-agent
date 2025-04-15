@@ -1,6 +1,5 @@
 <h1 align="center">
   <br>
-  <br>
   Detection-as-Code Agent
   <br>
 </h1>
@@ -19,101 +18,77 @@
 </br>
 </br>
 
-<p><strong>Note:</strong> This project is currently in development. Download links and community access will be available soon.</p>
+<p>This project is in development. Download links will be available upon release.</p>
 
 # **Detection-as-Code Agent**
-  <a href="#features">Features</a> •
-  <a href="#demo">Demo</a> •
-  <a href="#getting-started">Getting Started</a> •
-  <a href="#community">Community</a> •
-  <a href="#license">License</a>
+  <a href="#purpose">Purpose</a> •
+  <a href="#capabilities">Capabilities</a> •
+  <a href="#usage">Usage</a> •
+  <a href="#implementation">Implementation</a> •
+  <a href="#contribution">Contribution</a>
 </div>
 
 <br>
 
-# 👋 Welcome to DACAgent
+# DACAgent <a name="purpose"></a>
 
-DACAgent is an autonomous detection-as-code agent that lives in your IDE. It's designed to help security engineers, threat hunters, and SOC analysts build threat detection rules and search queries in any language and for any platform.
+DACAgent is a detection-as-code agent for VSCode. It helps security engineers and analysts build detection rules and search queries across security platforms.
 
-## 🚀 What's DACAgent?
+## Purpose
 
-DACAgent is a VSCode extension that transforms how security teams develop and manage detection rules. It adapts to your security stack, helping you create, test, and deploy detection content faster than ever before.
+DACAgent addresses the fundamental problem of detection engineering: creating consistent, effective detection logic across multiple security platforms, query languages, and data formats.
 
-### 🌟 Here's what DACAgent can do for you: <a name="features"></a>
+## Capabilities <a name="capabilities"></a>
 
-- 💡 **Autonomous Detection Development**: Convert security concepts into working detection rules for any platform (Sigma, KQL, SPL, EQL, etc.)
-- 🧠 **Contextual Awareness**: Understands your environment, data sources, and security stack
-- 🛡️ **Multi-Platform Support**: Works with any SIEM or EDR platform's query language
-- 🐞 **Detection Testing**: Validate rules against sample data before deployment
-- 🔄 **Rule Conversion**: Translate detection logic between different platforms and languages
-- 📚 **Knowledge Enhancement**: Learn best practices for detection engineering
-- 🔍 **Threat Hunt Assistance**: Generate complex search queries to hunt for specific TTPs
+- **Detection Development**: Creates detection rules for multiple platforms (Sigma, KQL, SPL, EQL)
+- **Platform Consistency**: Translates detection logic between query languages
+- **Validation**: Tests rules against sample data
+- **Conversion**: Transforms rules between formats
+- **Search Assistance**: Generates hunting queries for specific techniques
 
-## 🎬 See it in action <a name="demo"></a>
-
-Here's a demo of DACAgent helping a security engineer create a detection rule for malicious PowerShell execution:
+## Implementation Example <a name="usage"></a>
 
 <p align="center">
 <img src="./assets/detection-rule-demo.png" alt="DACAgent Detection Rule Demo">
 </p>
 
-## 🛠 Getting Started <a name="getting-started"></a>
+## Usage <a name="implementation"></a>
 
-> **Note:** The VSCode extension is currently in development and will be available soon.
+> The extension is in development.
 
-1. **Install VS Code**: If you haven't already, [download it here](https://code.visualstudio.com/).
-2. **Add DACAgent**:
-   - Open VS Code
-   - Click the puzzle piece icon on the left sidebar
-   - Search for "DACAgent" (Coming Soon)
-   - Click "Install"
-3. **Start Building Detections**:
-   - Open a new file
-   - Describe the threat behavior you want to detect
-   - Let DACAgent assist you in creating detection rules and queries!
+1. **Install VS Code**
+2. **Add DACAgent Extension**:
+   - VSCode Extension Marketplace
+   - Search for "DACAgent"
+   - Install
+3. **Usage**:
+   - New file
+   - Define threat behavior
+   - Generate detection logic
 
-## 💖 Why We Made This
+## Technical Rationale
 
-As security practitioners, we've experienced the challenges of writing effective detection rules. Detection engineering requires deep knowledge of both security concepts and query languages. DACAgent bridges this gap, making detection development more accessible to security teams of all experience levels while boosting the productivity of seasoned detection engineers.
+Detection engineering requires translating threat hypotheses into platform-specific query logic. This process demands:
 
-## 🤝 Join Our Community <a name="community"></a>
+1. Understanding of attacker TTPs
+2. Knowledge of data structure and sources
+3. Proficiency in query languages
+4. Platform-specific optimization
 
-> **Note:** Our community platforms are currently in development and will be launched soon.
+DACAgent automates these processes based on detection engineering first principles.
 
-Whether you're developing your first Sigma rule or building complex detection logic, you'll soon be able to join our community! Connect with fellow detection engineers and security practitioners to share ideas and best practices.
+## Development <a name="contribution"></a>
 
-## 🙏 Special Thanks
+If you want to contribute:
 
-A big shoutout to the amazing projects and people that inspired DACAgent:
-
-- **Sigma Project**: For standardizing detection rules
-- **MITRE ATT&CK**: For providing a comprehensive framework of adversary tactics and techniques
-- **Detection Engineering Community**: For continuous collaboration and knowledge sharing
-
-## 🚀 Ready to Transform Your Detection Engineering?
-
-DACAgent is coming soon! Stay tuned for the release of our VSCode extension.
-
-Whether you're writing your first detection rule or managing an enterprise detection engineering program, DACAgent is your companion for building more effective security content. Can't wait to see what you detect! 🌟
-
----
-
-<details>
-<summary>🔧 For the tech-savvy: How to Contribute <a name="license"></a></summary>
-
-If you're a developer and want to help make DACAgent even better, here's how:
-
-1. Clone the repo: `git clone https://github.com/armadoinc/detection-as-code-agent.git`
+1. Clone: `git clone https://github.com/armadoinc/detection-as-code-agent.git`
 2. Open in VS Code: `code dac-agent`
-3. Navigate to extension folder: `cd extension`
-4. Install dependencies: `npm run install:all`
-5. Run with `F5`
+3. Navigate: `cd extension`
+4. Install: `npm run install:all`
+5. Run: `F5`
 
-Pro tips:
+Development notes:
+- Webview supports hot-reload
+- Extension host requires full reload (Cmd/Ctrl + R)
 
-- Webview hot-reloads, but might need an occasional extension host reload
-- Extension host changes need a full reload (Cmd/Ctrl + R)
-
-Create a pull request with your improvements, and help us advance detection engineering for everyone!
-
-</details>
+Create pull requests to improve detection engineering capabilities.
